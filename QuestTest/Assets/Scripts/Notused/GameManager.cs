@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] int[] _card_id;
 
-    [SerializeField] DrawBackground _drawSprite;
-    [SerializeField] DrawTextModule _drawTextModule;
+    [SerializeField] BackgroundDrawer _drawSprite;
+    //[SerializeField] DrawTextModule _drawTextModule;
 
     QuestStepTask[] _questStepTask;
     EdgeTask[] _edgeTask;
@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
         {
             if (_questStepTask[i].id == source_id)
             {
-                _drawTextModule.DrawModule(_questStepTask[i].visualisations[0].id);
+                // _drawTextModule.DrawModule(_questStepTask[i].visualisations[0].id);
 
-                _drawTextModule.DrawText(_questStepTask[i].description);
+                //   _drawTextModule.DrawText(_questStepTask[i].description);
 
                 _drawSprite.Draw(_questStepTask[i].card.image.file_id);
             }
@@ -100,10 +100,10 @@ public class GameManager : MonoBehaviour
                             _mainButton.onClick.RemoveAllListeners();
 
                             _buttonText = _buttons[k].GetComponentInChildren<Text>();
-                            _buttonText.text = _questStepTask[j].choice_description;                                
+                            _buttonText.text = _questStepTask[j].choice_description;
 
                             _card_id[k] = _edgeTask[i].target_id;
-                            _buttons[k].onClick.AddListener(delegate { OnButtonPress(_card_id[l]); });                            
+                            _buttons[k].onClick.AddListener(delegate { OnButtonPress(_card_id[l]); });
                         }
                         else
                         {
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
                             _mainButton.onClick.AddListener(delegate { OnButtonPress(target_id); });
                         }
 
-                        k ++;
+                        k++;
                     }
                 }
             }
