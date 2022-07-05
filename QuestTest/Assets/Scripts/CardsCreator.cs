@@ -10,14 +10,12 @@ public struct QuestCard
 
     public int[] questButtonsId;
     public string[] questButtonsText;
-
 }
 
 public class CardsCreator : MonoBehaviour
 {
     QuestStepTask[] _questStepTask;
     EdgeTask[] _edgeTask;
-
 
     QuestCard _questCard;
     public Dictionary<int, QuestCard> _cardDictionary = new Dictionary<int, QuestCard>();
@@ -33,6 +31,7 @@ public class CardsCreator : MonoBehaviour
             _questCard.questStepTask = _questStepTask[i];
             _questCard.questButtonsId = new int[2];
             _questCard.questButtonsText = new string[2];
+            _questCard.questMainButton = 0;
 
             int z = 0;
 
@@ -61,7 +60,6 @@ public class CardsCreator : MonoBehaviour
                     }
                 }
             }
-
             _cardDictionary.Add(_questStepTask[i].id, _questCard);
         }
     }

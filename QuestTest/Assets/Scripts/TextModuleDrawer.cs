@@ -29,13 +29,18 @@ public class TextModuleDrawer : MonoBehaviour
 
     public void DrawModule(int id)
     {
-        myDict[id].gameObject.SetActive(true);
+        myDict[id].SetActive(true);
 
-        _text = myDict[id].GetComponentInChildren<Text>();
+        _text = myDict[id].GetComponentInChildren<Text>();        
     }
 
     public void DrawText(string description)
     {
         _text.text = description;
+    }
+
+    public void EraseModule(int id)
+    {
+        myDict[id].SetActive(false);
     }
 }

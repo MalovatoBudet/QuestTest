@@ -269,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &297975450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 800, y: 0}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &297975451
 MonoBehaviour:
@@ -496,10 +496,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2005755996}
-        m_TargetAssemblyTypeName: CardsDispalyer, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 3
+      - m_Target: {fileID: 603724455}
+        m_TargetAssemblyTypeName: QuestButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -559,6 +559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 0}
+  _id: 0
+  _cardsDispalyer: {fileID: 2005755996}
 --- !u!1 &818135853
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +644,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818135856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 818135858}
+        m_TargetAssemblyTypeName: QuestButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818135856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,6 +708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1933512655}
+  _id: 0
+  _cardsDispalyer: {fileID: 2005755996}
 --- !u!1 &849033509
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,10 +742,10 @@ RectTransform:
   m_Father: {fileID: 1603121503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 395, y: -236}
+  m_SizeDelta: {x: 690, y: 54.437866}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849033511
 MonoBehaviour:
@@ -790,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932271695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -809,7 +825,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 194, y: 470}
-  m_SizeDelta: {x: 800, y: 0}
+  m_SizeDelta: {x: 800, y: 542}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &932271696
 MonoBehaviour:
@@ -934,7 +950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1241973064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1241973066}
+        m_TargetAssemblyTypeName: QuestButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1241973064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,6 +1014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1761603813}
+  _id: 0
+  _cardsDispalyer: {fileID: 2005755996}
 --- !u!1 &1501624356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,10 +1050,10 @@ RectTransform:
   m_Father: {fileID: 297975450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -100}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501624358
 MonoBehaviour:
@@ -1123,10 +1153,10 @@ RectTransform:
   m_Father: {fileID: 932271695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -271}
+  m_SizeDelta: {x: 800, y: 542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603121504
 MonoBehaviour:
@@ -1329,10 +1359,10 @@ RectTransform:
   m_Father: {fileID: 1501624357}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -95}
+  m_SizeDelta: {x: 730, y: 54.437866}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683946010
 MonoBehaviour:
@@ -1714,3 +1744,5 @@ MonoBehaviour:
   _buttons:
   - {fileID: 1241973066}
   - {fileID: 818135858}
+  _currentCardId: 17
+  _previousmoduleId: 7

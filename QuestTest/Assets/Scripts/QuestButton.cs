@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class QuestButton : MonoBehaviour
 {
     [SerializeField] Text _text;
+    [SerializeField] int _id;
 
-    int _id;
+    [SerializeField] CardsDispalyer _cardsDispalyer;
 
     public void ShowText(string text)
     {
@@ -17,5 +18,10 @@ public class QuestButton : MonoBehaviour
     public void StoreId(int id)
     {
         _id = id;
+    }
+
+    public void OnButtonClick()
+    {
+        _cardsDispalyer.Show(_id);
     }
 }
